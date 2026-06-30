@@ -1,0 +1,36 @@
+{
+    "folder": ".",
+    "steps": {
+        "lint_before": {
+            "returncode": 0,
+            "stdout": "All checks passed!",
+            "stderr": ""
+        },
+        "ruff_autofix": {
+            "returncode": 0,
+            "stdout": "All checks passed!",
+            "stderr": ""
+        },
+        "isort": {
+            "returncode": 0,
+            "stdout": "Fixing /Users/siddharthpoosarla/Desktop/astra/astra_core/pipeline/full_pipeline.py\nFixing /Users/siddharthpoosarla/Desktop/astra/astra_core/ml/train_model.py",
+            "stderr": ""
+        },
+        "black": {
+            "returncode": 0,
+            "stdout": "",
+            "stderr": "reformatted /Users/siddharthpoosarla/Desktop/astra/astra_core/ml/train_model.py\nreformatted /Users/siddharthpoosarla/Desktop/astra/astra_core/pipeline/full_pipeline.py\n\nAll done! \u2728 \ud83c\udf70 \u2728\n2 files reformatted, 9 files left unchanged."
+        },
+        "lint_after": {
+            "returncode": 0,
+            "stdout": "All checks passed!",
+            "stderr": ""
+        },
+        "pytest": {
+            "returncode": 0,
+            "stdout": "============================= test session starts ==============================\nplatform darwin -- Python 3.13.1, pytest-9.0.2, pluggy-1.5.0\nrootdir: /Users/siddharthpoosarla/Desktop/astra\nplugins: anyio-4.11.0\ncollected 1 item\n\ntests/test_basic.py .                                                    [100%]\n\n============================== 1 passed in 0.01s ===============================",
+            "stderr": ""
+        }
+    },
+    "generated_at": "2026-02-08 01:46:29"
+}

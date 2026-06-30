@@ -1,0 +1,96 @@
+{
+    "mode": "scanall",
+    "folder": ".",
+    "files_scanned": 31,
+    "files_with_errors": [
+        {
+            "file": "./astra_core/pipeline/full_pipeline.py",
+            "errors": [
+                {
+                    "type": "runtime",
+                    "error": "Traceback (most recent call last):\n  File \"/Users/siddharthpoosarla/Desktop/astra/./astra_core/pipeline/full_pipeline.py\", line 1, in <module>\n    from astra_core.engines.python_engine import (\n    ...<5 lines>...\n    )\nModuleNotFoundError: No module named 'astra_core'"
+                }
+            ]
+        },
+        {
+            "file": "./astra_core/pipeline/ai_full_pipeline.py",
+            "errors": [
+                {
+                    "type": "runtime",
+                    "error": "Traceback (most recent call last):\n  File \"/Users/siddharthpoosarla/Desktop/astra/./astra_core/pipeline/ai_full_pipeline.py\", line 1, in <module>\n    from astra_core.engines.python_engine import (\n    ...<5 lines>...\n    )\nModuleNotFoundError: No module named 'astra_core'"
+                }
+            ]
+        },
+        {
+            "file": "./astra_core/pipeline/ai_compile_fix_pipeline.py",
+            "errors": [
+                {
+                    "type": "runtime",
+                    "error": "Traceback (most recent call last):\n  File \"/Users/siddharthpoosarla/Desktop/astra/./astra_core/pipeline/ai_compile_fix_pipeline.py\", line 1, in <module>\n    from astra_core.ai.ollama_engine import call_ollama\nModuleNotFoundError: No module named 'astra_core'"
+                }
+            ]
+        },
+        {
+            "file": "./astra_core/pipeline/ai_fix_pipeline.py",
+            "errors": [
+                {
+                    "type": "runtime",
+                    "error": "Traceback (most recent call last):\n  File \"/Users/siddharthpoosarla/Desktop/astra/./astra_core/pipeline/ai_fix_pipeline.py\", line 4, in <module>\n    from astra_core.ai.ollama_engine import call_ollama\nModuleNotFoundError: No module named 'astra_core'"
+                }
+            ]
+        },
+        {
+            "file": "./astra_core/pipeline/fixone_pipeline.py",
+            "errors": [
+                {
+                    "type": "ruff",
+                    "error": "F841 Local variable `original_code` is assigned to but never used\n  --> astra_core/pipeline/fixone_pipeline.py:78:9\n   |\n76 | def fix_one_file(file_path, model=\"qwen2.5-coder:3b\", max_attempts=5):\n77 |     with open(file_path, \"r\", encoding=\"utf-8\") as f:\n78 |         original_code = f.read()\n   |         ^^^^^^^^^^^^^\n79 |\n80 |     error_context = \"\"\n   |\nhelp: Remove assignment to unused variable `original_code`\n\nFound 1 error.\nNo fixes available (1 hidden fix can be enabled with the `--unsafe-fixes` option)."
+                },
+                {
+                    "type": "runtime",
+                    "error": "Traceback (most recent call last):\n  File \"/Users/siddharthpoosarla/Desktop/astra/./astra_core/pipeline/fixone_pipeline.py\", line 3, in <module>\n    from astra_core.ai.ollama_engine import call_ollama\nModuleNotFoundError: No module named 'astra_core'"
+                }
+            ]
+        },
+        {
+            "file": "./astra_core/pipeline/scanall_pipeline.py",
+            "errors": [
+                {
+                    "type": "ruff",
+                    "error": "F401 [*] `os` imported but unused\n --> astra_core/pipeline/scanall_pipeline.py:1:8\n  |\n1 | import os\n  |        ^^\n2 | import subprocess\n3 | from astra_core.utils.file_scanner import scan_project_files\n  |\nhelp: Remove unused import: `os`\n\nFound 1 error.\n[*] 1 fixable with the `--fix` option."
+                },
+                {
+                    "type": "runtime",
+                    "error": "Traceback (most recent call last):\n  File \"/Users/siddharthpoosarla/Desktop/astra/./astra_core/pipeline/scanall_pipeline.py\", line 3, in <module>\n    from astra_core.utils.file_scanner import scan_project_files\nModuleNotFoundError: No module named 'astra_core'"
+                }
+            ]
+        },
+        {
+            "file": "./astra_core/ml/predict_defects.py",
+            "errors": [
+                {
+                    "type": "runtime",
+                    "error": "Traceback (most recent call last):\n  File \"/Users/siddharthpoosarla/Desktop/astra/./astra_core/ml/predict_defects.py\", line 2, in <module>\n    from astra_core.ml.feature_extractor import extract_features\nModuleNotFoundError: No module named 'astra_core'"
+                }
+            ]
+        },
+        {
+            "file": "./demo_project/complex.py",
+            "errors": [
+                {
+                    "type": "syntax",
+                    "error": "File \"./demo_project/complex.py\", line 14\n    with open(p\n             ^\nSyntaxError: '(' was never closed"
+                },
+                {
+                    "type": "ruff",
+                    "error": "invalid-syntax: Expected `,`, found name\n  --> demo_project/complex.py:15:13\n   |\n14 |         with open(p\n15 |             content = f.read()\n   |             ^^^^^^^\n16 |     except FileNotF\\\\\\\\\n17 |         cjbefiyug\n   |\n\ninvalid-syntax: Expected `,`, found `except`\n  --> demo_project/complex.py:16:5\n   |\n14 |         with open(p\n15 |             content = f.read()\n16 |     except FileNotF\\\\\\\\\n   |     ^^^^^^\n17 |         cjbefiyug\n18 |         oundError:\n   |\n\ninvalid-syntax: Positional argument cannot follow keyword argument\n  --> demo_project/complex.py:16:12\n   |\n14 |         with open(p\n15 |             content = f.read()\n16 |     except FileNotF\\\\\\\\\n   |            ^^^^^^^^\n17 |         cjbefiyug\n18 |         oundError:\n   |\n\ninvalid-syntax: Expected a newline after line continuation character\n  --> demo_project/complex.py:16:20\n   |\n14 |         with open(p\n15 |             content = f.read()\n16 |     except FileNotF\\\\\\\\\n   |                    ^\n17 |         cjbefiyug\n18 |         oundError:\n   |\n\ninvalid-syntax: Expected a newline after line continuation character\n  --> demo_project/complex.py:16:21\n   |\n14 |         with open(p\n15 |             content = f.read()\n16 |     except FileNotF\\\\\\\\\n   |                     ^\n17 |         cjbefiyug\n18 |         oundError:\n   |\n\ninvalid-syntax: Expected a newline after line continuation character\n  --> demo_project/complex.py:16:22\n   |\n14 |         with open(p\n15 |             content = f.read()\n16 |     except FileNotF\\\\\\\\\n   |                      ^\n17 |         cjbefiyug\n18 |         oundError:\n   |\n\ninvalid-syntax: Positional argument cannot follow keyword argument\n  --> demo_project/complex.py:17:9\n   |\n15 |             content = f.read()\n16 |     except FileNotF\\\\\\\\\n17 |         cjbefiyug\n   |         ^^^^^^^^^\n18 |         oundError:\n19 |         print(\"File not found. Please check the file permissions.\")\n   |\n\ninvalid-syntax: Expected `,`, found name\n  --> demo_project/complex.py:18:9\n   |\n16 |     except FileNotF\\\\\\\\\n17 |         cjbefiyug\n18 |         oundError:\n   |         ^^^^^^^^^\n19 |         print(\"File not found. Please check the file permissions.\")\n20 |     except Exception as e:\n   |\n\ninvalid-syntax: Expected `)`, found `:`\n  --> demo_project/complex.py:18:18\n   |\n16 |     except FileNotF\\\\\\\\\n17 |         cjbefiyug\n18 |         oundError:\n   |                  ^\n19 |         print(\"File not found. Please check the file permissions.\")\n20 |     except Exception as e:\n   |\n\ninvalid-syntax: Expected an indented block after `with` statement\n  --> demo_project/complex.py:19:9\n   |\n17 |         cjbefiyug\n18 |         oundError:\n19 |         print(\"File not found. Please check the file permissions.\")\n   |         ^^^^^\n20 |     except Exception as e:\n21 |         print(f\"An error occurred while reading the file: {e}\")\n   |\n\nFound 10 errors."
+                },
+                {
+                    "type": "runtime",
+                    "error": "File \"/Users/siddharthpoosarla/Desktop/astra/./demo_project/complex.py\", line 14\n    with open(p\n             ^\nSyntaxError: '(' was never closed"
+                }
+            ]
+        }
+    ],
+    "generated_at": "2026-04-07 12:22:09"
+}

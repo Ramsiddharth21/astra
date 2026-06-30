@@ -1,0 +1,12 @@
+{
+    "mode": "aifix",
+    "folder": "demo_project",
+    "ruff_lint": {
+        "returncode": 1,
+        "stdout": "invalid-syntax: Expected `:`, found newline\n --> demo_project/file1.py:7:9\n  |\n5 | b = 20\n6 |\n7 | if a > b\n  |         ^\n8 |     prin(\"a is greater\")\n  |\n\nFound 1 error.",
+        "stderr": ""
+    },
+    "ai_fixes": [],
+    "note": "No files detected from ruff output for AI fixing.",
+    "generated_at": "2026-02-08 02:28:47"
+}

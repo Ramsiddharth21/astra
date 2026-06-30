@@ -1,0 +1,13 @@
+{
+    "mode": "ai_compile_fix",
+    "folder": "demo_project",
+    "files_checked": 4,
+    "fixes": [
+        {
+            "file": "demo_project/complex.py",
+            "status": "failed",
+            "reason": "Empty AI output"
+        }
+    ],
+    "generated_at": "2026-02-12 13:04:26"
+}

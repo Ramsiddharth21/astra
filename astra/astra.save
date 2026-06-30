@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ "$1" == "serve" ]; then
+    echo "[ASTRA] Starting AI server..."
+    ollama serve
+else
+    echo "Usage: astra serve"
+fi
